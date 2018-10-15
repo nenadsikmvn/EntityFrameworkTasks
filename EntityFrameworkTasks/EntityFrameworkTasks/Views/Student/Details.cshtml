@@ -1,0 +1,43 @@
+﻿@model EntityFrameworkTasks.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndexNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndexNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyProgramme.ProgrammeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudyProgramme.ProgrammeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
